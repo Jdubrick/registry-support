@@ -70,7 +70,7 @@ build_registry() {
   cd "$OLDPWD"
 
   # Generate the tar archive
-  for stackDir in $outputFolder/stacks/*; do
+  for stackDir in /Users/jordandubrick/repos/registry-support/stacks/*; do
   if [[ -d "${stackDir}" ]]; then
     cd $stackDir
     if [[ -f "stack.yaml" ]]; then
