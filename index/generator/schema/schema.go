@@ -163,6 +163,7 @@ type Schema struct {
 	Provider          string                       `yaml:"provider,omitempty" json:"provider,omitempty"`
 	SupportUrl        string                       `yaml:"supportUrl,omitempty" json:"supportUrl,omitempty"`
 	Versions          []Version                    `yaml:"versions,omitempty" json:"versions,omitempty"`
+	LastModified      time.Time                    `yaml:"lastModified,omitempty" json:"lastModified,omitempty"`
 }
 
 // DevfileType describes the type of devfile
@@ -266,7 +267,7 @@ type Version struct {
 	DeploymentScopes map[DeploymentScopeKind]bool `yaml:"deploymentScopes,omitempty" json:"deploymentScopes,omitempty"`
 	Resources        []string                     `yaml:"resources,omitempty" json:"resources,omitempty"`
 	StarterProjects  []string                     `yaml:"starterProjects,omitempty" json:"starterProjects,omitempty"`
-	LastModified     string                       `yaml:"lastModified,omitempty" json:"lastModified,omitempty"`
+	LastModified     time.Time                    `yaml:"lastModified,omitempty" json:"lastModified,omitempty"`
 }
 
 type LastModifiedEntry struct {
